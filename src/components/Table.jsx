@@ -1,14 +1,8 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import CurrencyFormat from 'react-currency-format';
+import CurrencyFormat from "react-currency-format";
 const Table = ({ coinx }) => {
-  // console.log(props);
-
-  // const numberFormat = (value) => new Intl.NumberFormat("en-US").format(value);
-
-
-
-
 
   return (
     <>
@@ -28,7 +22,13 @@ const Table = ({ coinx }) => {
                   Precio:{" "}
                   <span className="badge bg-secondary">
                     {/* $ {(coin.current_price)} */}
-                    <CurrencyFormat value={coin.current_price} decimalScale={2} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                    <CurrencyFormat
+                      value={coin.current_price}
+                      decimalScale={2}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"$"}
+                    />
                   </span>
                 </div>
                 <div className="fw-bold">
